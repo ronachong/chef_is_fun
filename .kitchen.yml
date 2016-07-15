@@ -1,0 +1,17 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: debian-jessie
+    driver_config:
+      image: debian:jessie
+
+suites:
+  - name: default
+    run_list:
+      - recipe[holberton-wrapper]
