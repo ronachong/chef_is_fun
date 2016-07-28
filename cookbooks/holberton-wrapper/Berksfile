@@ -1,3 +1,10 @@
 source "https://supermarket.chef.io"
 
+# specify that any dependencies listed in metadata.rb should be installed
 metadata
+
+# specify cookbooks to install
+cookbook 'apt', '~> 4.0.1'	# configures apt & apt services
+cookbook 'ntp', '~> 2.0.0'	# installs and configures ntp
+cookbook 'openssh', '~> 2.0.0'	# installs & configures OpenSSH
+cookbook 'user', '~> 0.4.2'	# allows mgmt of user accounts & SSH keys
